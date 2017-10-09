@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private TextView tv_BaiDuDemo;
     private TextView tv_lianxi;
+    private TextView tv_LocSdk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         tv_BaiDuDemo = (TextView) findViewById(R.id.tv_BaiDuDemo);
         tv_lianxi = (TextView) findViewById(R.id.tv_lianxi);
+        tv_LocSdk = (TextView) findViewById(R.id.tv_LocSdk);
         tv_BaiDuDemo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this,ExerciseActivity.class);
+                startActivity(intent);
+            }
+        });
+        tv_LocSdk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,LocSdkActivity.class);
                 startActivity(intent);
             }
         });
